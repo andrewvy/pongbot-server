@@ -5,7 +5,7 @@ var config = require('./config'),
 var Logger = function(name) {
 	this.name = name || "Unnamed Task";
 	this.startTime = new Date().getTime();
-	this.done = function() {
+	this.prototype.done = function() {
 		var e = new Date().getTime();
 		var s = e - this.startTime;
 		console.log("Task: " + this.name + " completed in " + s + "ms.");
