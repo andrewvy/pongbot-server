@@ -1,0 +1,17 @@
+{
+  "name": "pongbot-server",
+  "version": "0.9.0",
+  "description": "Pongbot web server for Opal.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "4.6.x",
+    "request": "",
+    "express-hbs": ""
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Vy",
+  "license": "ISC"
+}
