@@ -34,7 +34,7 @@ var api = {
 		for (var i=0;i<arr.members.length;i++) {
 			var u = {
 				name: arr.members[i].name,
-				avatar: arr.members[i].profile.image_24
+				avatar: arr.members[i].profile.image_48
 			};
 			userAvatars.push(u);
 		}
