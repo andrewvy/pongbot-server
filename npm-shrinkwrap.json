@@ -2,6 +2,11 @@
   "name": "pongbot-server",
   "version": "0.9.0",
   "dependencies": {
+    "colors": {
+      "version": "0.6.2",
+      "from": "colors@",
+      "resolved": "https://registry.npmjs.org/colors/-/colors-0.6.2.tgz"
+    },
     "express": {
       "version": "4.6.1",
       "from": "express@4.6.x",
@@ -173,6 +178,37 @@
           "version": "1.0.0",
           "from": "utils-merge@1.0.0",
           "resolved": "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.0.tgz"
+        }
+      }
+    },
+    "hogan-express": {
+      "version": "0.5.2",
+      "from": "hogan-express@",
+      "resolved": "https://registry.npmjs.org/hogan-express/-/hogan-express-0.5.2.tgz",
+      "dependencies": {
+        "hogan.js": {
+          "version": "3.0.2",
+          "from": "hogan.js@>=2.0.0",
+          "resolved": "https://registry.npmjs.org/hogan.js/-/hogan.js-3.0.2.tgz",
+          "dependencies": {
+            "nopt": {
+              "version": "1.0.10",
+              "from": "nopt@1.0.10",
+              "resolved": "https://registry.npmjs.org/nopt/-/nopt-1.0.10.tgz",
+              "dependencies": {
+                "abbrev": {
+                  "version": "1.0.5",
+                  "from": "abbrev@1",
+                  "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.5.tgz"
+                }
+              }
+            },
+            "mkdirp": {
+              "version": "0.3.0",
+              "from": "mkdirp@0.3.0",
+              "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz"
+            }
+          }
         }
       }
     },
