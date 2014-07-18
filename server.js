@@ -2,24 +2,41 @@ var request = require('request')
 ,	express = require('express')
 ,	config = require('./config')
 ,	api = require('./api')
-,	helpers = require('./helpers');
+,	helpers = require('./helpers')
+,	routes = require('./routes');
 
-var express = require('express');
-var app = express();
+// Models
+var Model = require('./models/Model');
+
+var express = require('express')
+,	app = express()
+,	log = new helpers.Logger("Server Instantiated on Port " + config.port);
 
 // Initialize modules
 
 api.initialize();
 helpers.initialize();
 
-// Retrive new avatars, if there are any.
+// Settings
+app.engine('html', require('hogan-express'));
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views/');
+app.use(express.static(__dirname + '/public'));
+
+// Retrive new avatars, if there are any. Store in users model.
 
 api.getUserAvatars(function(avatars) {
 	helpers.saveUserAvatars(avatars);
+	Model.Users.initialize(avatars);
+	api.getPlayers(function(playerData) {
+		helpers.addPlayerDataToUsers(playerData);
+	});
 });
 
+// Fetch and merge in player data with users.
+
+// Routes
+app.get('/', routes.index);
 // Start server and listen.
-
-var server = app.listen(1337, function() {
-	console.log('Listening on port %d', server.address().port);
-});
+app.listen(config.port);
+log.done();

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pongbot Web Server</title>
+	<link rel="stylesheet" href="stylesheets/main.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<h1>Pongbot</h1>
+	{{#users}}
+		<li>{{name}} <img src="images/users/{{name}}.jpg"></li>
+	{{/users}}
+
+</body>
+</html>

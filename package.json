@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "4.6.x",
     "request": "",
-    "express-hbs": ""
+    "hogan-express": "",
+    "colors": ""
   },
   "devDependencies": {},
   "scripts": {
