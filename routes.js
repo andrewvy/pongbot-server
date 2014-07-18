@@ -1,8 +1,10 @@
-var Users = require('./models/users');
+var Model = require('./models/Model');
 
 var routes = {
 	index: function (req, res) {
-		res.render('index');
+		var users = Model.Users.get();
+		var renderModel = {users: users};
+		res.render('index', renderModel);
 	}
 };
 

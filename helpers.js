@@ -47,6 +47,23 @@ var helpers = {
 	errorMsg: function(str) {
 		console.log(str.italics.red);
 	},
+	pruneUsers: function(playerData) {
+		var logger = new Logger("Pruning User Data");
+		var users = Model.Users.get();
+		var newUsers = [];
+		for (var i=0;i<playerData.length;i++) {
+			for (var k=0;k<users.length;k++) {
+				if (playerData[i].user_name == users[k].name) {
+					newUsers.push(users[k]);
+					break;
+				}
+			}
+			if(i == playerData.length - 1) {
+				logger.done();
+				Model.Users.initialize(newUsers);
+			}
+		}
+	},
 	addPlayerDataToUsers: function(playerData) {
 		var logger = new Logger("Merging Player Data with Users");
 		for (var i=0;i<playerData.length;i++) {

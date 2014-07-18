@@ -10,10 +10,8 @@
 </head>
 
 <body>
-
-	<h1>Pongbot</h1>
 	{{#users}}
-		<li>{{name}} <img src="images/users/{{name}}.jpg"></li>
+		<li><img src="images/users/{{name}}.jpg"> {{name}} - Wins: {{wins}} - Losses: {{losses}} - Elo: {{elo}}</li>
 	{{/users}}
 
 </body>

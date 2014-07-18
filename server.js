@@ -29,6 +29,7 @@ api.getUserAvatars(function(avatars) {
 	helpers.saveUserAvatars(avatars);
 	Model.Users.initialize(avatars);
 	api.getPlayers(function(playerData) {
+		helpers.pruneUsers(playerData);
 		helpers.addPlayerDataToUsers(playerData);
 	});
 });
