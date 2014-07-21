@@ -62,3 +62,19 @@ table{
     border-collapse:collapse;
     border-spacing:0;
 }
+
+li {
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+}
+
+#users_list {
+    text-align: center;
+}
+
+#users_list h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 20px;
+}

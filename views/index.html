@@ -10,9 +10,11 @@
 </head>
 
 <body>
-	{{#users}}
-		<li><img src="images/users/{{name}}.jpg"> {{name}} - Wins: {{wins}} - Losses: {{losses}} - Elo: {{elo}}</li>
-	{{/users}}
-
+	<div id="users_list">
+		<h1>Leaderboard</h1>
+		{{#users}}
+			<li><img src="images/users/{{name}}.jpg"> {{name}} - Wins: {{wins}} - Losses: {{losses}} - Elo: {{elo}}</li>
+		{{/users}}
+	</div>
 </body>
 </html>
